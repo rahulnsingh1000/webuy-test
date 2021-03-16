@@ -10949,3 +10949,7 @@ a.text-dark:focus {
   }
 }
 
+.required{
+  color: red;
+}
+

@@ -12,7 +12,8 @@ class CreateFailedJobsTable extends Migration
      * @return void
      */
     public function up()
-    {
+    {   
+        if(Schema::hasTable('failed_jobs')) return;       //add this line to your database file
         Schema::create('failed_jobs', function (Blueprint $table) {
             $table->id();
             $table->text('connection');

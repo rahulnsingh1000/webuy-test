@@ -25,12 +25,12 @@ class InstalledVersions
 private static $installed = array (
   'root' => 
   array (
-    'pretty_version' => 'dev-master',
-    'version' => 'dev-master',
+    'pretty_version' => 'dev-main',
+    'version' => 'dev-main',
     'aliases' => 
     array (
     ),
-    'reference' => 'fdcbedcaaf7a282fe5f46c60082f767b857777b6',
+    'reference' => 'ccb86bd2f86164a5b90b2bf406322b07dff81489',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -477,12 +477,12 @@ private static $installed = array (
     ),
     'laravel/laravel' => 
     array (
-      'pretty_version' => 'dev-master',
-      'version' => 'dev-master',
+      'pretty_version' => 'dev-main',
+      'version' => 'dev-main',
       'aliases' => 
       array (
       ),
-      'reference' => 'fdcbedcaaf7a282fe5f46c60082f767b857777b6',
+      'reference' => 'ccb86bd2f86164a5b90b2bf406322b07dff81489',
     ),
     'laravel/passport' => 
     array (
@@ -1368,6 +1368,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '6964c76c7804814a842473e0c8fd15bab0f18e25',
+    ),
+    'yajra/laravel-datatables-oracle' => 
+    array (
+      'pretty_version' => 'v9.15.2',
+      'version' => '9.15.2.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'e0b416d8b7d4472b16217c40e74284074cc34dde',
     ),
     'zendframework/zend-diactoros' => 
     array (
