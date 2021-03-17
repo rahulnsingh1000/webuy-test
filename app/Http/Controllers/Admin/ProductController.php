@@ -49,7 +49,7 @@ class ProductController extends Controller
 	    $productId = $request->product_id;
 
 	   
-    	$validationArray['title']='required|min:5|max:100|unique:products,title';
+    	$validationArray['title']='required|min:5|max:100';
     	$validationArray['category_id']='required';
     	$validationArray['description']='required';
     	$validationArray['price']='required|numeric|min:1';

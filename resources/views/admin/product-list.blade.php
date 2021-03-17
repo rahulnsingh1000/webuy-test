@@ -69,7 +69,7 @@
 					<div class="form-group">
 						<label class="col-sm-2 control-label">Description</label>
 						<div class="col-sm-12">
-							<input type="text" class="form-control" id="description" name="description" placeholder="Enter Description" value="">
+							<textarea type="text" class="form-control" id="description" name="description" placeholder="Enter Description" value=""></textarea>
 							<span id="description_error" class="required"></span>
 						</div>
 					</div>

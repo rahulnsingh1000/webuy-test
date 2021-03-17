@@ -109,6 +109,7 @@ $(document).ready( function () {
             },
             success:function(response){
 
+                $('#show_image').attr('src', 'images/default.jpg');
                 $("#is_image_changed").val(0);
                 $("#product_id").val('');
                 $('#productForm').trigger("reset");

@@ -5,7 +5,9 @@
 @section('content')
 
     <div class="container products">
-
+        @if(Session::has('message'))
+            <p class="alert alert-info">{{ Session::get('message') }}</p>
+        @endif
         <div class="row">
 
             @foreach($products as $product)

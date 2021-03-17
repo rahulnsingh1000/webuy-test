@@ -22,16 +22,16 @@ Route::get('config-clear', function(){
 	return 'config cleared sucessfully';
 });
 
-Route::get('/', 'HomeController@index');
-Route::get('cart', 'HomeController@cart');
-Route::get('add-to-cart/{id}', 'HomeController@addToCart');
-Route::patch('update-cart', 'HomeController@update');
-Route::delete('remove-from-cart', 'HomeController@remove');
+Route::get('/', 'UserOrderController@index');
+Route::get('cart', 'UserOrderController@cart');
+Route::get('add-to-cart/{id}', 'UserOrderController@addToCart');
+Route::patch('update-cart', 'UserOrderController@update');
+Route::delete('remove-from-cart', 'UserOrderController@remove');
 
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'UserOrderController@index')->name('home');
 
 Route::get('dashboard', 'Admin\AdminController@dashboard')->name('dashboard');
 Route::get('admin', 'Admin\AdminController@dashboard');
@@ -45,6 +45,11 @@ Route::get('category-list', 'Admin\CategoryController@index');
 Route::get('category-list/{id}/edit', 'Admin\CategoryController@edit');
 Route::post('category-list/store', 'Admin\CategoryController@store');
 Route::get('category-list/delete/{id}', 'Admin\CategoryController@destroy');
+
+Route::get('order-list', 'Admin\OrderController@index');
+
+Route::get('checkout', 'UserOrderController@checkout')->name('checkout');
+Route::post('/add-address', 'UserOrderController@addAddress')->name('add-address');
 
 /*Route::get('/admin', function(){
 echo "Hello Admin";
