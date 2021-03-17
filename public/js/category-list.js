@@ -16,7 +16,13 @@ $(document).ready( function () {
 		{data: 'id', name: 'id', 'visible': false},
 			{data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false,searchable: false},
 			{ data: 'category_name', name: 'category_name' },
-			{ data: 'status', name: 'status' },
+			{ 
+		        data: 'status', 
+		        name: 'status',
+		        render: function ( data, type, full, meta ) {
+		           return (data==1) ? "Active" : "In-active" ;
+		        }
+		    },
 			{ data: 'created_at', name: 'created_at' },
 			{data: 'action', name: 'action', orderable: false},
 		],
@@ -60,9 +66,48 @@ $(document).ready( function () {
 				}
 			});
 		}
-	}); 
+	});
+
+	$('#modalBody').on('submit',"#categoryForm", (function(e) {
+        e.preventDefault();
+        var formData = new FormData(this);
+        $('#btn-save').html('Sending..');
+        $(".required").html('');
+        $.ajax({
+            type:'POST',
+            url: $(this).attr('action'),
+            data:formData,
+            cache:false,
+            contentType: false,
+            processData: false,
+            dataType:"json",
+            // async: false,
+            beforeSend: function () {
+                
+            },
+            success:function(response){
+
+                $("#is_image_changed").val(0);
+                $("#category_id").val('');
+                $('#categoryForm').trigger("reset");
+                $('#ajax-category-modal').modal('hide');
+                $('#btn-save').html('Save Changes');
+                var oTable = $('#laravel_datatable').dataTable();
+                oTable.fnDraw(false);
+                
+            },
+            error: function(response){
+                var responseData=JSON.parse(response.responseText);
+                $.each(responseData.errors, function(index, value){
+                    var errorDiv = '#'+index+'_error';
+                    $(errorDiv).empty().append(value);
+                });
+                $('#btn-save').html('Save Changes');
+            }
+        });
+    })); 
 });
-if ($("#categoryForm").length > 0) {
+/*if ($("#categoryForm").length > 0) {
 	$("#categoryForm").validate({
 		submitHandler: function(form) {
 			var actionType = $('#btn-save').val();
@@ -86,4 +131,4 @@ if ($("#categoryForm").length > 0) {
 			});
 		}
 	})
-}
+}*/

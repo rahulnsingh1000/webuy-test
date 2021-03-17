@@ -53,7 +53,7 @@
 					<div class="form-group">
 						<label for="name" class="col-sm-2 control-label">Image</label>
 						<div class="col-sm-12">
-							<img src=""  id="show_image" height="55" width="55">
+							<img src="images/default.jpg"  id="show_image" height="55" width="55">
 							<input type="file" class="form-control" id="image" name="image">
 							<input type="hidden" class="form-control" id="is_image_changed" name="is_image_changed">
 							<span id="image_error" class="required"></span>
@@ -75,7 +75,7 @@
 					</div>
 					<div class="col-sm-offset-2 col-sm-10">
 						<button type="submit" class="btn btn-primary" id="btn-save" value="create">Save changes</button>
-						<span id="title_error" class="required"></span>
+						<button type="button" class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Close</button>
 					</div>
 				</form>
 			</div>

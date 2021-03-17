@@ -43,6 +43,18 @@ class CategoryController extends Controller
 	public function store(Request $request)
 	{  
 	    $CategoryId = $request->category_id;
+
+	    if(empty($CategoryId)){
+	    	$validationArray['category_name']='required|min:2|max:100|unique:categories,category_name';
+	    }else{
+	    	$validationArray['category_name']='required|min:2|max:100';
+	    }
+
+	    
+    	$validationArray['status']='required';
+    	$validationArrayMsg=array();
+	    $this->validate($request,$validationArray,$validationArrayMsg);
+
 	    $category   =   Category::updateOrCreate(['id' => $CategoryId],
 	                ['category_name' => $request->category_name, 'status' => $request->status]);        
 	    return Response::json($category);

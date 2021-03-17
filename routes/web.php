@@ -14,14 +14,19 @@ use Illuminate\Support\Facades\Redirect;
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 Route::get('config-clear', function(){
 	Artisan::call('config:clear');
 	return 'config cleared sucessfully';
 });
 
+Route::get('/', 'HomeController@index');
+Route::get('cart', 'HomeController@cart');
+Route::get('add-to-cart/{id}', 'HomeController@addToCart');
+Route::patch('update-cart', 'HomeController@update');
+Route::delete('remove-from-cart', 'HomeController@remove');
 
 
 Auth::routes();
@@ -45,13 +50,13 @@ Route::get('category-list/delete/{id}', 'Admin\CategoryController@destroy');
 echo "Hello Admin";
 })->middleware('admin');*/
 
-Route::get('/customer', function(){
+/*Route::get('/customer', function(){
 echo "Hello Customer";
-})->middleware('customer');
+})->middleware('customer');*/
 /*Route::get('/admin', function () {
     return view('welcome');
 });*/
 
 Route::get('/customer', function () {
-    return view('welcome');
+   return redirect('/');
 });

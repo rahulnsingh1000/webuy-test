@@ -25,25 +25,33 @@
 			<div class="modal-header">
 				<h4 class="modal-title" id="categoryCrudModal"></h4>
 			</div>
-			<div class="modal-body">
-				<form id="categoryForm" name="categoryForm" class="form-horizontal">
+			<div class="modal-body" id="modalBody">
+				<form id="categoryForm" name="categoryForm" class="form-horizontal" action="category-list/store" enctype="multipart/form-data">
 					<input type="hidden" name="category_id" id="category_id">
 					
 					<div class="form-group">
 						<label for="name" class="col-sm-2 control-label">Category</label>
 						<div class="col-sm-12">
-							<input type="text" class="form-control" id="category_name" name="category_name" placeholder="Enter Tilte" value="" maxlength="50" required="">
+							<input type="text" class="form-control" id="category_name" name="category_name" placeholder="Enter Tilte" value="" maxlength="50">
+							<span id="category_name_error" class="required"></span>
 						</div>
 					</div>
 					<div class="form-group">
 						<label for="name" class="col-sm-2 control-label">Status</label>
 						<div class="col-sm-12">
-							<input type="text" class="form-control" id="status" name="status" placeholder="Enter Status" value="" maxlength="50" required="">
+							
+							<select class="form-control" id="status" name="status">
+							    <option value="">Please status</option>
+							        <option value="1">Active</option>
+							        <option value="2">In Active</option>
+							</select>
+							<span id="status_error" class="required"></span>
 						</div>
 					</div>
 					
 					<div class="col-sm-offset-2 col-sm-10">
 						<button type="submit" class="btn btn-primary" id="btn-save" value="create">Save changes</button>
+						<button type="button" class="btn btn-danger" data-dismiss="modal" aria-hidden="true">Close</button>
 					</div>
 				</form>
 			</div>

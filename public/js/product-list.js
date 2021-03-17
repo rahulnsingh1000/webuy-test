@@ -110,6 +110,7 @@ $(document).ready( function () {
             success:function(response){
 
                 $("#is_image_changed").val(0);
+                $("#product_id").val('');
                 $('#productForm').trigger("reset");
                 $('#ajax-product-modal').modal('hide');
                 $('#btn-save').html('Save Changes');
