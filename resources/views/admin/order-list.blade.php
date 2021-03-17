@@ -19,6 +19,7 @@
 			<th>Total</th>
 			<th>Customer Name</th>
 			<th>Customer Email</th>
+			<th>Mobile</th>
 			<th>Address</th>
 			<th>Order at</th>
 			<!-- <th>Action</th> -->

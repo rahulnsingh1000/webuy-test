@@ -30,6 +30,7 @@ $(document).ready( function () {
             { data: 'total', name: 'total' },
             { data: 'name', name: 'name' },
             { data: 'email', name: 'email' },
+            { data: 'mobile', name: 'mobile' },
             { data: 'address', name: 'address' },
             { data: 'created_at', name: 'created_at' },
             //{data: 'action', name: 'action', orderable: false},

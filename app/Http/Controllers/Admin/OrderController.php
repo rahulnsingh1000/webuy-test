@@ -27,7 +27,7 @@ class OrderController extends Controller
 	{	
 		// display all the orders in the desc order
 	    if(request()->ajax()) {
-	    	$getData=Order::select('product_id','products.image','products.title','categories.category_name','users.name','users.email','orders.*')->join('products', 'orders.product_id', '=', 'products.id')->join('categories', 'products.category_id', '=', 'categories.id')->join('users', 'orders.user_id', '=', 'users.id')->get();
+	    	$getData=Order::select('product_id','products.image','products.title','categories.category_name','users.name','users.email','users.mobile','orders.*')->join('products', 'orders.product_id', '=', 'products.id')->join('categories', 'products.category_id', '=', 'categories.id')->join('users', 'orders.user_id', '=', 'users.id')->get();
 
 	        return datatables()->of($getData)
 	        ->addColumn('action', 'action')
