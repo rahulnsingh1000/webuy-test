@@ -22,7 +22,7 @@ Route::get('config-clear', function(){
 	return 'config cleared sucessfully';
 });
 
-Route::get('/', 'UserOrderController@index');
+Route::get('/', 'HomeController@index');
 Route::get('cart', 'UserOrderController@cart');
 Route::get('add-to-cart/{id}', 'UserOrderController@addToCart');
 Route::patch('update-cart', 'UserOrderController@update');
