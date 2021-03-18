@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="PHP" type="php">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../eduvanzbeta/vendor/composer" />
+          <root url="file://$MODULE_DIR$/../eduvanzbeta/vendor/mpdf/mpdf" />
+          <root url="file://$MODULE_DIR$/../eduvanzbeta/vendor/paragonie/random_compat" />
+          <root url="file://$MODULE_DIR$/../eduvanzbeta/vendor/phpseclib/phpseclib" />
+          <root url="file://$MODULE_DIR$/../eduvanzbeta/vendor/phpunit/php-code-coverage" />
+          <root url="file://$MODULE_DIR$/../eduvanzbeta/vendor/phpunit/php-file-iterator" />
+          <root url="file://$MODULE_DIR$/../eduvanzbeta/vendor/phpunit/php-text-template" />
+          <root url="file://$MODULE_DIR$/../eduvanzbeta/vendor/phpunit/php-timer" />
+          <root url="file://$MODULE_DIR$/../eduvanzbeta/vendor/phpunit/php-token-stream" />
+          <root url="file://$MODULE_DIR$/../eduvanzbeta/vendor/phpunit/phpunit" />
+          <root url="file://$MODULE_DIR$/../eduvanzbeta/vendor/phpunit/phpunit-mock-objects" />
+          <root url="file://$MODULE_DIR$/../eduvanzbeta/vendor/setasign/fpdi" />
+          <root url="file://$MODULE_DIR$/../eduvanzbeta/vendor/symfony/yaml" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../eduvanzbeta/vendor/composer" />
+          <root url="file://$MODULE_DIR$/../eduvanzbeta/vendor/mpdf/mpdf" />
+          <root url="file://$MODULE_DIR$/../eduvanzbeta/vendor/paragonie/random_compat" />
+          <root url="file://$MODULE_DIR$/../eduvanzbeta/vendor/phpseclib/phpseclib" />
+          <root url="file://$MODULE_DIR$/../eduvanzbeta/vendor/phpunit/php-code-coverage" />
+          <root url="file://$MODULE_DIR$/../eduvanzbeta/vendor/phpunit/php-file-iterator" />
+          <root url="file://$MODULE_DIR$/../eduvanzbeta/vendor/phpunit/php-text-template" />
+          <root url="file://$MODULE_DIR$/../eduvanzbeta/vendor/phpunit/php-timer" />
+          <root url="file://$MODULE_DIR$/../eduvanzbeta/vendor/phpunit/php-token-stream" />
+          <root url="file://$MODULE_DIR$/../eduvanzbeta/vendor/phpunit/phpunit" />
+          <root url="file://$MODULE_DIR$/../eduvanzbeta/vendor/phpunit/phpunit-mock-objects" />
+          <root url="file://$MODULE_DIR$/../eduvanzbeta/vendor/setasign/fpdi" />
+          <root url="file://$MODULE_DIR$/../eduvanzbeta/vendor/symfony/yaml" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="PHARS">
+        <CLASSES>
+          <root url="phar://$MODULE_DIR$/vendor/phar-io/manifest/tests/_fixture/test.phar/" />
+        </CLASSES>
+        <SOURCES>
+          <root url="phar://$MODULE_DIR$/vendor/phar-io/manifest/tests/_fixture/test.phar/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>
