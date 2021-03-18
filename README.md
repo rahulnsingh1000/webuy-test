@@ -15,7 +15,7 @@ https://laravel.com/docs/7.x/deployment#server-requirements
 
 ### Development setup guide
 - Clone the repo
-  ```https://github.com/rahulnsingh1000/webuy2021.git```
+  ```https://github.com/rahulnsingh1000/webuy-test.git```
 - Download dependencies with composer and npm
 - Set your env variables in .env file if not found copy .env.example
 - Set APP_KEY in .env
