@@ -18,7 +18,7 @@ class ProductController extends Controller
 	}
 
 	/**
-	 * Display a listing of the resource.
+	 * Display a listing of the product.
 	 *
 	 * @return \Illuminate\Http\Response
 	 */
@@ -39,7 +39,7 @@ class ProductController extends Controller
 	  
 	  
 	/**
-	 * Store a newly created resource in storage.
+	 * Store a newly created product in storage.
 	 *
 	 * @param  \Illuminate\Http\Request  $request
 	 * @return \Illuminate\Http\Response
@@ -66,6 +66,9 @@ class ProductController extends Controller
 	    $dataToProcess['price']=$request->price;
 	    if(!empty($request->is_image_changed) || empty($productId)){
 
+	    	if (!file_exists('images')) {
+			    mkdir('images', 0777, true);
+			}
 	    	$imageName = time().'.'.$request->image->extension();  
         	$request->image->move(public_path('images'), $imageName);
 
@@ -81,7 +84,7 @@ class ProductController extends Controller
 	  
 	  
 	/**
-	 * Show the form for editing the specified resource.
+	 * Show the form for editing the specified product.
 	 *
 	 * @param  \App\Product  $product
 	 * @return \Illuminate\Http\Response
@@ -96,7 +99,7 @@ class ProductController extends Controller
 	  
 	  
 	/**
-	 * Remove the specified resource from storage.
+	 * Remove the specified product from storage.
 	 *
 	 * @param  \App\Product  $product
 	 * @return \Illuminate\Http\Response
