@@ -13,9 +13,8 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
-                    <a href="product-list" class="btn btn-secondary">Product</a>
                     <a href="category-list" class="btn btn-secondary">Categories</a>
+                    <a href="product-list" class="btn btn-secondary">Product</a>
                     <a href="order-list" class="btn btn-secondary">Orders</a>
                 </div>
             </div>

@@ -33,6 +33,7 @@ Auth::routes();
 
 Route::get('/home', 'UserOrderController@index')->name('home');
 
+/*********************************Admin Routes Start********************************************/
 Route::get('dashboard', 'Admin\AdminController@dashboard')->name('dashboard');
 Route::get('admin', 'Admin\AdminController@dashboard');
 
@@ -47,20 +48,11 @@ Route::post('category-list/store', 'Admin\CategoryController@store');
 Route::get('category-list/delete/{id}', 'Admin\CategoryController@destroy');
 
 Route::get('order-list', 'Admin\OrderController@index');
+/******************************************END********************************************************/
 
 Route::get('checkout', 'UserOrderController@checkout')->name('checkout');
 Route::post('/add-address', 'UserOrderController@addAddress')->name('add-address');
 
-/*Route::get('/admin', function(){
-echo "Hello Admin";
-})->middleware('admin');*/
-
-/*Route::get('/customer', function(){
-echo "Hello Customer";
-})->middleware('customer');*/
-/*Route::get('/admin', function () {
-    return view('welcome');
-});*/
 
 Route::get('/customer', function () {
    return redirect('/');

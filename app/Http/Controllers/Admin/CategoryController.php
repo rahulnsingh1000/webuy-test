@@ -17,7 +17,7 @@ class CategoryController extends Controller
 	}
 	
     /**
-	 * Display a listing of the resource.
+	 * Display a listing of the category.
 	 *
 	 * @return \Illuminate\Http\Response
 	 */
@@ -35,7 +35,7 @@ class CategoryController extends Controller
 	  
 	  
 	/**
-	 * Store a newly created resource in storage.
+	 * Store a newly created category in storage.
 	 *
 	 * @param  \Illuminate\Http\Request  $request
 	 * @return \Illuminate\Http\Response
@@ -62,7 +62,7 @@ class CategoryController extends Controller
 	  
 	  
 	/**
-	 * Show the form for editing the specified resource.
+	 * Show the form for editing the specified category.
 	 *
 	 * @param  \App\Category  $category
 	 * @return \Illuminate\Http\Response
@@ -77,7 +77,7 @@ class CategoryController extends Controller
 	  
 	  
 	/**
-	 * Remove the specified resource from storage.
+	 * Remove the specified category from storage.
 	 *
 	 * @param  \App\Category  $category
 	 * @return \Illuminate\Http\Response
