@@ -19,7 +19,7 @@ https://laravel.com/docs/7.x/deployment#server-requirements
 - Download dependencies with composer and npm
 - Set your env variables in .env file if not found copy .env.example
 - Set APP_KEY in .env
-- Upload DB file
+- Export DB file(DB file is in the root folder)
 - Create storage link to public using cmd: ```php artisan storage:link```
 - Start dev server using cmd: ```php artisan serve```
 
